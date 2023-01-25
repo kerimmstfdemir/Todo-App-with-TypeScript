@@ -1,10 +1,9 @@
-import { isTryStatement } from "typescript"
 
-const TodoListItem:React.FC<IlistItem> = ( {item} ) => {
+const TodoListItem:React.FC<IlistItem> = ( {item, toggleTodo} ) => {
     return (
         <li>
-            {item.isDone ? <p className='checked'></p>
-            :<p>{item.task}</p>}
+            {item.isDone ? <p className='checked' onClick={() => toggleTodo(item)}>{item.task}</p>
+            :<p onClick={() => toggleTodo(item)}>{item.task}</p>}
             <span className="task-icons" >✖️</span>
         </li>
     )
