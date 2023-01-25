@@ -1,12 +1,10 @@
-interface IlistItem {
-    item: TodoType
-}
+import { isTryStatement } from "typescript"
 
 const TodoListItem:React.FC<IlistItem> = ( {item} ) => {
     return (
         <li>
-            <p className='checked'>Todo </p>
-            <p> Todo </p>
+            {item.isDone ? <p className='checked'></p>
+            :<p>{item.task}</p>}
             <span className="task-icons" >✖️</span>
         </li>
     )

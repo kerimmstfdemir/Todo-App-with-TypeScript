@@ -7,3 +7,9 @@ interface TodoType {
 interface ITodoList {
     todos: TodoType[]
 }
+
+interface IlistItem {
+    item: TodoType
+}
+
+type AddFunction = (text:string) => void;
