@@ -1,4 +1,8 @@
-const TodoListItem = () => {
+interface IlistItem {
+    item: TodoType
+}
+
+const TodoListItem:React.FC<IlistItem> = ( {item} ) => {
     return (
         <li>
             <p className='checked'>Todo </p>
